@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cef Tanzy — Criador do Trap Zouk</title>
+<meta name="description" content="Cef Tanzy, cantor, compositor, produtor e ator angolano. Criador do estilo trap zouk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#150C26; --plum:#241338; --gold:#E8B04B; --rose:#E0507E; --ivory:#F4EDE3; --mute:#B9ADC9;
+  --display:'Syne','Arial Black',system-ui,sans-serif; --body:'Manrope',system-ui,-apple-system,sans-serif;
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--night);color:var(--ivory);font:400 1.0625rem/1.7 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:20;padding:env(safe-area-inset-top,0px) 0 0;background:linear-gradient(var(--night),transparent)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font:800 1.1rem var(--display);text-decoration:none;letter-spacing:.02em}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--mute);transition:color .2s}
+nav ul a:hover{color:var(--ivory)}
+
+/* hero */
+.hero{min-height:100svh;position:relative;display:flex;align-items:center;overflow:hidden;padding:110px 0 70px}
+.hero::before{content:"";position:absolute;width:70vmax;height:70vmax;right:-25vmax;top:-20vmax;border-radius:50%;
+  background:radial-gradient(circle at 40% 40%,rgba(224,80,126,.55),rgba(232,176,75,.18) 45%,transparent 68%);filter:blur(10px)}
+.hero h1{font:800 clamp(3.6rem,15vw,11rem)/.86 var(--display);margin:0 0 28px;letter-spacing:-.04em;position:relative}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--gold)}
+.hero p.lead{max-width:34ch;font-size:clamp(1.15rem,2.4vw,1.45rem);color:var(--ivory);margin:0 0 34px;position:relative}
+.btns{display:flex;gap:14px;flex-wrap:wrap;position:relative}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .2s,background .2s}
+.btn.main{background:var(--gold);color:var(--night)}
+.btn.main:hover{transform:translateY(-2px);background:#F2C26A}
+.btn.ghost{border:1.5px solid rgba(244,237,227,.35)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.wave{position:absolute;left:0;right:0;bottom:0;height:90px;display:flex;align-items:flex-end;gap:5px;padding:0 24px;opacity:.9}
+.wave i{flex:1;background:linear-gradient(var(--rose),var(--gold));border-radius:3px 3px 0 0;height:20%;animation:eq 1.6s ease-in-out infinite alternate}
+@keyframes eq{to{height:var(--h)}}
+
+/* sections */
+section{padding:110px 0}
+h2{font:800 clamp(2rem,5vw,3.4rem)/1.05 var(--display);letter-spacing:-.03em;margin:0 0 28px;max-width:16ch}
+.about{background:var(--plum)}
+.about .grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:60px;align-items:center}
+.photo{margin:0;aspect-ratio:4/5;border-radius:28px 28px 120px 28px;overflow:hidden;position:relative;border:1.5px solid rgba(232,176,75,.5);background:linear-gradient(155deg,var(--rose),var(--plum) 60%,var(--night));display:grid;place-items:center}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo b{font:800 clamp(5rem,14vw,9rem) var(--display);color:transparent;-webkit-text-stroke:2px var(--gold);letter-spacing:-.05em}
+.photo figcaption{position:absolute;left:18px;bottom:16px;font-size:.85rem;color:var(--ivory);opacity:.8}
+.social{display:flex;gap:10px;flex-wrap:wrap;position:relative}
+.social a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;background:rgba(244,237,227,.08);border:1px solid rgba(244,237,227,.2);text-decoration:none;font-weight:600;font-size:.95rem;transition:all .2s}
+.social a:hover{background:var(--gold);color:var(--night);border-color:var(--gold);transform:translateY(-2px)}
+.social svg{width:18px;height:18px;fill:currentColor}
+.hero .social{margin-top:26px}
+footer .social{justify-content:center;margin:0 0 30px}
+.about p{color:#DDD2EA;max-width:60ch;margin:0 0 18px}
+dl.facts{grid-column:1/-1;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0 36px}
+dl.facts div{padding:18px 0;border-bottom:1px solid rgba(244,237,227,.14)}
+dl.facts dt{font-size:.85rem;color:var(--mute);margin-bottom:2px}
+dl.facts dd{margin:0;font:600 1.2rem var(--display)}
+
+/* timeline */
+.line{position:relative;margin-top:50px;padding-left:34px;border-left:2px solid rgba(232,176,75,.4)}
+.line article{position:relative;padding:0 0 46px}
+.line article::before{content:"";position:absolute;left:-43px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--night);border:3px solid var(--gold)}
+.line time{font:800 1.9rem var(--display);color:var(--gold)}
+.line h3{margin:4px 0 6px;font:600 1.25rem var(--display)}
+.line p{margin:0;color:var(--mute);max-width:58ch}
+
+/* sound */
+.sound{background:linear-gradient(160deg,var(--plum),var(--night))}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tabs button{font:600 1rem var(--body);padding:12px 22px;border-radius:999px;border:1.5px solid rgba(244,237,227,.3);background:transparent;color:var(--ivory);cursor:pointer;transition:all .2s}
+.tabs button[aria-selected="true"]{background:var(--rose);border-color:var(--rose)}
+.panel{max-width:62ch;font-size:1.25rem;line-height:1.6;min-height:7.5em}
+.infl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:70px}
+.infl div{padding:26px;border-radius:22px;background:rgba(244,237,227,.06)}
+.infl h3{margin:0 0 6px;font:600 1.2rem var(--display)}
+.infl p{margin:0;color:var(--mute);font-size:.98rem}
+
+.shows{list-style:none;margin:0;padding:0;max-width:760px}
+.shows li{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(244,237,227,.14)}
+.shows .d{font:800 1.3rem var(--display);color:var(--gold)}
+.shows .w b{display:block;font:600 1.1rem var(--display)}
+.shows .w span{color:var(--mute);font-size:.95rem}
+.empty{max-width:52ch;padding:26px;border-radius:22px;background:rgba(244,237,227,.06);color:var(--mute)}
+.contact{background:var(--plum)}
+.contact .grid2{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:start}
+.contact p{color:#DDD2EA;max-width:44ch}
+form.book{display:grid;gap:18px}
+form.book .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form.book label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+form.book input,form.book select,form.book textarea{font:400 1rem var(--body);color:var(--ivory);background:rgba(244,237,227,.07);border:1.5px solid rgba(244,237,227,.25);border-radius:14px;padding:13px 15px;width:100%}
+form.book select option{color:#111}
+form.book textarea{min-height:130px;resize:vertical}
+form.book button{justify-self:start;border:0;cursor:pointer;font:600 1rem var(--body)}
+#msg{min-height:1.5em;color:var(--gold);margin:0}
+@media(max-width:760px){.contact .grid2{grid-template-columns:1fr;gap:30px}form.book .two{grid-template-columns:1fr}.shows li{grid-template-columns:1fr;gap:4px}}
+footer{padding:70px 0 50px;text-align:center;border-top:1px solid rgba(244,237,227,.12)}
+footer b{font:800 2rem var(--display);display:block;margin-bottom:8px}
+footer small{color:var(--mute)}
+
+@media(max-width:760px){
+  nav ul{display:none}
+  .about .grid{grid-template-columns:1fr;gap:34px}
+  .photo{max-width:340px}
+  dl.facts{grid-column:auto}
+  section{padding:80px 0}
+}
+@media(prefers-reduced-motion:reduce){.wave i{animation:none;height:var(--h)}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#topo">Cef Tanzy</a>
+<ul><li><a href="#sobre">Sobre</a></li><li><a href="#trajetoria">Trajetória</a></li><li><a href="#som">Sonoridade</a></li><li><a href="#agenda">Agenda</a></li><li><a href="#contacto">Contacto</a></li></ul></div></nav>
+
+<header class="hero" id="topo">
+  <div class="wrap">
+    <h1>Cef<span>Tanzy</span></h1>
+    <p class="lead">Cantor, compositor, produtor e ator angolano. O criador do trap zouk.</p>
+    <div class="btns"><a class="btn main" href="#trajetoria">Conhecer a história</a><a class="btn ghost" href="#som">Descobrir o som</a></div>
+    <nav class="social" aria-label="Redes sociais"></nav>
+  </div>
+  <div class="wave" id="wave" aria-hidden="true"></div>
+</header>
+
+<section class="about" id="sobre">
+  <div class="wrap grid">
+    <figure class="photo" id="photo"><b aria-hidden="true">CT</b><figcaption>Cef Tanzy</figcaption></figure>
+    <div>
+      <h2>De Damba para o som de Angola</h2>
+      <p>Carlos Fernando Tanzi nasceu a 30 de junho de 1986, no Tsotso, na Damba (Uíge). Ainda criança mudou-se com a família para Luanda e cresceu na zona da Mabor, no Cazenga.</p>
+      <p>Hoje é reconhecido como o criador do estilo trap zouk e como um nome que funde R&amp;B, Afropop e World Music, com sucessos e prémios na música nacional.</p>
+    </div>
+    <dl class="facts">
+      <div><dt>Nome de batismo</dt><dd>Carlos Fernando Tanzi</dd></div>
+      <div><dt>Nascimento</dt><dd>30 de junho de 1986</dd></div>
+      <div><dt>Naturalidade</dt><dd>Damba, Uíge, Angola</dd></div>
+      <div><dt>Atividade</dt><dd>Cantor, compositor, produtor, ator</dd></div>
+      <div><dt>Estilo que criou</dt><dd>Trap zouk</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="trajetoria">
+  <div class="wrap">
+    <h2>Uma trajetória em três tempos</h2>
+    <div class="line">
+      <article><time>1986</time><h3>Nasce na Damba</h3><p>No Tsotso, província do Uíge. Ainda criança, segue com a família para Luanda e cresce no Cazenga, na zona da Mabor.</p></article>
+      <article><time>9–10 anos</time><h3>O coral da Igreja Boa Nova</h3><p>Começa a cantar no coral da igreja, influenciado pelos irmãos, pelo R&amp;B norte-americano e por artistas angolanos como Paulo Flores e Eduardo Paim.</p></article>
+      <article><time>2003</time><h3>Estrelas ao Palco</h3><p>Participa no concurso e chega à final. É o momento da revelação para o grande público.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sound" id="som">
+  <div class="wrap">
+    <h2>Um som sem fronteiras</h2>
+    <div class="tabs" role="tablist" aria-label="Géneros">
+      <button role="tab" aria-selected="true" data-i="0">Trap zouk</button>
+      <button role="tab" aria-selected="false" data-i="1">R&amp;B</button>
+      <button role="tab" aria-selected="false" data-i="2">Afropop</button>
+      <button role="tab" aria-selected="false" data-i="3">World Music</button>
+    </div>
+    <p class="panel" id="panel" role="tabpanel" aria-live="polite"></p>
+    <div class="infl">
+      <div><h3>Paulo Flores</h3><p>Referência da música angolana que marcou o seu início.</p></div>
+      <div><h3>Eduardo Paim</h3><p>Outra voz angolana que moldou a sua sensibilidade.</p></div>
+      <div><h3>R&amp;B norte-americano</h3><p>A base das melodias e da forma de cantar desde criança.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="agenda">
+  <div class="wrap">
+    <h2>Agenda de shows</h2>
+    <ul class="shows" id="shows"></ul>
+    <p class="empty" id="noshows">Ainda não há datas anunciadas. Para levar o Cef Tanzy ao seu evento, use o formulário abaixo.</p>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap grid2">
+    <div>
+      <h2>Contratações e imprensa</h2>
+      <p>Conte-nos sobre o seu evento: data, local e tipo de espetáculo. O pedido segue para o e-mail de contratações do artista.</p>
+    </div>
+    <form class="book" id="book">
+      <div class="two">
+        <label>Nome<input name="nome" required autocomplete="name"></label>
+        <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Tipo de pedido<select name="tipo"><option>Show</option><option>Festival</option><option>Evento privado</option><option>Imprensa</option><option>Outro</option></select></label>
+        <label>Data e local<input name="data" placeholder="Ex.: 12 de dezembro, Luanda"></label>
+      </div>
+      <label>Mensagem<textarea name="msg" required></textarea></label>
+      <button class="btn main" type="submit">Enviar pedido</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap"><b>Cef Tanzy</b><nav class="social" aria-label="Redes sociais"></nav><small>Site de homenagem ao artista. Informações biográficas de fontes públicas.</small></div></footer>
+
+<script>
+/* Trocar pelos links oficiais: url = perfil do artista. Foto: PHOTO = endereço de imagem em data URI. */
+const PHOTO='perfil.jpg';
+const q=encodeURIComponent('Cef Tanzy');
+const SOCIAL=[
+ {n:'Instagram',url:'https://www.instagram.com/explore/search/keyword/?q='+q,d:'M12 2.2c3.2 0 3.6 0 4.8.1 3.300.150 4.800 1.700 4.900 4.900.100 1.200.100 1.600.100 4.800s0 3.600-.1 4.800c-.1 3.200-1.600 4.800-4.900 4.900-1.200.1-1.600.1-4.800.1s-3.600 0-4.800-.1c-3.300-.1-4.800-1.700-4.900-4.900C2.200 15.600 2.200 15.200 2.200 12s0-3.600.1-4.800C2.400 3.900 4 2.400 7.200 2.300 8.400 2.200 8.800 2.200 12 2.200zm0 4.600a5.200 5.200 0 100 10.400 5.200 5.200 0 000-10.400zm0 8.600a3.400 3.400 0 110-6.800 3.400 3.400 0 010 6.800zm5.400-9.900a1.200 1.200 0 100 2.400 1.200 1.200 0 000-2.400z'},
+ {n:'YouTube',url:'https://www.youtube.com/results?search_query='+q,d:'M21.600 7.200a2.500 2.500 0 00-1.800-1.800C18.200 5 12 5 12 5s-6.200 0-7.800.4A2.500 2.500 0 002.400 7.200C2 8.800 2 12 2 12s0 3.200.4 4.800a2.500 2.500 0 001.800 1.800C5.800 19 12 19 12 19s6.200 0 7.800-.4a2.500 2.500 0 001.800-1.800c.4-1.600.4-4.800.4-4.800s0-3.200-.4-4.800zM10 15V9l5.200 3L10 15z'},
+ {n:'Spotify',url:'https://open.spotify.com/search/'+q,d:'M12 2a10 10 0 100 20 10 10 0 000-20zm4.600 14.400a.6.6 0 01-.8.200c-2.200-1.300-5-1.600-8.300-.9a.6.6 0 11-.3-1.200c3.600-.8 6.700-.5 9.200 1a.6.6 0 01.2.900zm1.200-2.700a.8.8 0 01-1 .3c-2.500-1.600-6.400-2-9.400-1.100a.8.8 0 11-.5-1.500c3.400-1 7.700-.5 10.600 1.300.4.200.500.700.300 1zm.1-2.800c-3-1.800-8-2-10.900-1.100a.9.9 0 11-.5-1.800c3.300-1 8.800-.8 12.300 1.300a.9.9 0 11-.9 1.600z'},
+ {n:'Facebook',url:'https://www.facebook.com/search/top?q='+q,d:'M22 12a10 10 0 10-11.600 9.900v-7H7.900V12h2.500V9.800c0-2.500 1.500-3.900 3.800-3.900 1.100 0 2.200.2 2.200.2v2.500h-1.300c-1.200 0-1.600.8-1.600 1.600V12h2.800l-.4 2.900h-2.300v7A10 10 0 0022 12z'},
+ {n:'TikTok',url:'https://www.tiktok.com/search?q='+q,d:'M16.600 2h-3.300v13.300a2.700 2.700 0 11-2.700-2.700c.3 0 .5 0 .8.100V9.300a6 6 0 105.200 5.900V8.600a7.500 7.500 0 004.400 1.400V6.700A4.400 4.400 0 0116.600 2z'}];
+document.querySelectorAll('.social').forEach(c=>SOCIAL.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',s.n+' de Cef Tanzy');a.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+s.d+'"/></svg>'+s.n;c.appendChild(a)}));
+if(PHOTO){const i=new Image();i.src=PHOTO;i.alt='Cef Tanzy';document.getElementById('photo').prepend(i)}
+/* Contacto: trocar pelo e-mail real de contratações. Agenda: adicionar shows em SHOWS. */
+const EMAIL='CONTACTO@SEUDOMINIO.COM';
+const SHOWS=[/* {data:'12 Dez 2026',local:'Luanda',nome:'Nome do evento',link:'https://...'} */];
+const ul=document.getElementById('shows');
+SHOWS.forEach(s=>{const li=document.createElement('li');const d=document.createElement('span');d.className='d';d.textContent=s.data;
+ const w=document.createElement('div');w.className='w';const b=document.createElement('b');b.textContent=s.nome;const sp=document.createElement('span');sp.textContent=s.local;w.append(b,sp);li.append(d,w);
+ if(s.link){const a=document.createElement('a');a.className='btn ghost';a.href=s.link;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Bilhetes';li.append(a)}ul.append(li)});
+if(SHOWS.length)document.getElementById('noshows').hidden=true;
+document.getElementById('book').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);
+ const body='Nome: '+f.get('nome')+'\nE-mail: '+f.get('email')+'\nData e local: '+(f.get('data')||'-')+'\n\n'+f.get('msg');
+ location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent(f.get('tipo')+' — Cef Tanzy')+'&body='+encodeURIComponent(body);
+ document.getElementById('msg').textContent='A abrir o seu e-mail para enviar o pedido.'});
+const wave=document.getElementById('wave');
+for(let i=0;i<64;i++){const b=document.createElement('i');
+  b.style.setProperty('--h',(25+Math.abs(Math.sin(i*.55))*70)+'%');
+  b.style.animationDelay=(i*.07)+'s';wave.appendChild(b)}
+const txt=[
+ 'O estilo criado por Cef Tanzy: a batida e a atitude do trap encontram a melodia romântica e dançante do zouk.',
+ 'A base de tudo. O R&B norte-americano acompanha-o desde os primeiros anos, no coral e em casa.',
+ 'Melodias africanas com linguagem pop, feitas para cantar junto e para dançar.',
+ 'Uma abertura a sonoridades de vários cantos do mundo, sem perder a raiz angolana.'];
+const tabs=[...document.querySelectorAll('.tabs button')],p=document.getElementById('panel');
+function show(i){tabs.forEach((t,k)=>t.setAttribute('aria-selected',k===i));p.textContent=txt[i]}
+tabs.forEach((t,k)=>t.addEventListener('click',()=>show(k)));show(0);
+</script>
+</body>
+</html>
+
